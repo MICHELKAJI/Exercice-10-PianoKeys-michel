@@ -6,9 +6,26 @@ keys.forEach(function(key){
 })
 
 // Write named functions that change the color of the keys below
+const keyNotes = document.getElementsByClassName('keynote');
 
+function PlayKey(){
+  keyNotes.forEach((keyNote) => {
+    keyNote.addEventListener('mousedown', (event)=> {
+       event.target.style.backgroundColor = 'blue';
+    });
+ });
+}
 
 // Write a named function with event handler properties
+function KeyReturn(){
+  keyNotes.forEach((keyNote) => {
+    keyNote.addEventListener('mouseup', (event)=> {
+       event.target.style.backgroundColor = 'blue';
+    });
+ });
+
+}
+console.log(keyNotes);
 
 
 // Write a loop that runs the array elements through the function
