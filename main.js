@@ -46,6 +46,8 @@ startOver.hidden= true;
   nextOne.addEventListener('click', function(){
     nextTwo.hidden = false;
     nextOne.hidden = true;
+    document.getElementById('word-five').innerHTML="DEAR";
+    document.getElementById('word-six').innerHTML="FRI";
     
 
   })
