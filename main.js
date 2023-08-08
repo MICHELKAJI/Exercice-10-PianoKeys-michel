@@ -46,16 +46,24 @@ startOver.hidden= true;
   nextOne.addEventListener('click', function(){
     nextTwo.hidden = false;
     nextOne.hidden = true;
-    document.getElementById('word-five').innerHTML="DEAR";
-    document.getElementById('word-six').innerHTML="FRI";
+    document.getElementById('letter-note-five').innerHTML="D";
+    document.getElementById('letter-note-six').innerHTML="C";
     
-
   })
 
 // Write anonymous event handler property and function for the second progress button
 nextTwo.addEventListener('click', function(){
   nextThree.hidden = false;
   nextTwo.hidden = true;
+  document.getElementById('word-five').innerHTML="DEAR";
+  document.getElementById('word-six').innerHTML="FRI-";
+  document.getElementById('letter-note-three').innerHTML="G";
+  document.getElementById('letter-note-four').innerHTML="E";
+  document.getElementById('letter-note-five').innerHTML="C";
+  document.getElementById('letter-note-six').innerHTML="B";
+  const lastLyric = document.getElementById('column-optional');
+  lastLyric.style.display ='inline-block';
+ 
  
 })
 
@@ -64,6 +72,22 @@ nextTwo.addEventListener('click', function(){
 nextThree.addEventListener('click', function(){
 startOver.hidden = false;
 nextThree.hidden = true;
+document.getElementById('word-one').innerHTML ="HAP-";
+document.getElementById('word-tow').innerHTML ="PY";
+document.getElementById('word-three').innerHTM ="BIRTH";
+document.getElementById('word-four').innerHTML ="DAY";
+document.getElementById('word-five').innerHTML ="TO";
+document.getElementById('word-six').innerHTML ="YOU!";
+
+document.getElementById('letter-note-one').innerHTML ="F";
+document.getElementById('letter-note-tow').innerHTML ="F";
+document.getElementById('letter-note-three').innerHTML ="E";
+document.getElementById('letter-note-four').innerHTML ="C";
+document.getElementById('letter-note-five').innerHTML ="D";
+document.getElementById('letter-note-six').innerHTML ="C";
+
+lastLyric.style.display= 'none';
+
 
 });
 
