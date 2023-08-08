@@ -1,3 +1,4 @@
+
 // The keys and notes variables store the piano keys
 const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
 const notes = [];
@@ -5,27 +6,28 @@ keys.forEach(function(key){
   notes.push(document.getElementById(key));
 })
 
-// Write named functions that change the color of the keys below
-const keyNotes = document.getElementsByClassName('keynote');
 
-function PlayKey(){
-  keyNotes.forEach((keyNote) => {
-    keyNote.addEventListener('mousedown', (event)=> {
-       event.target.style.backgroundColor = 'blue';
-    });
- });
+// Write named functions that change the color of the keys below
+
+
+function playKey(event){
+      event.target.style.backgroundColor="red";
 }
 
 // Write a named function with event handler properties
-function KeyReturn(){
-  keyNotes.forEach((keyNote) => {
-    keyNote.addEventListener('mouseup', (event)=> {
-       event.target.style.backgroundColor = 'blue';
-    });
- });
-
+function KeyReturn(event){
+ 
+    event.target.style.backgroundColor = '';
 }
-console.log(keyNotes);
+function playNote(note){
+  note.addEventListener('mousedown',playKey);
+  note.addEventListener('mouseup',KeyReturn);
+  };
+
+  
+    notes.forEach(playNote);
+  
+ 
 
 
 // Write a loop that runs the array elements through the function
