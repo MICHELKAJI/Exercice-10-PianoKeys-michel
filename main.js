@@ -5,15 +5,10 @@ const notes = [];
 keys.forEach(function(key){
   notes.push(document.getElementById(key));
 })
-
-
 // Write named functions that change the color of the keys below
-
-
 function playKey(event){
       event.target.style.backgroundColor="red";
 }
-
 // Write a named function with event handler properties
 function KeyReturn(event){
  
@@ -42,15 +37,12 @@ nextThree.hidden = true;
 startOver.hidden= true;
 
 // Write anonymous event handler property and function for the first progress button
-
   nextOne.addEventListener('click', function(){
     nextTwo.hidden = false;
     nextOne.hidden = true;
     document.getElementById('letter-note-five').innerHTML="D";
     document.getElementById('letter-note-six').innerHTML="C";
-    
   })
-
 // Write anonymous event handler property and function for the second progress button
 nextTwo.addEventListener('click', function(){
   nextThree.hidden = false;
@@ -63,10 +55,7 @@ nextTwo.addEventListener('click', function(){
   document.getElementById('letter-note-six').innerHTML="B";
   const lastLyric = document.getElementById('column-optional');
   lastLyric.style.display ='inline-block';
- 
- 
 })
-
 
 // Write anonymous event handler property and function for the third progress button
 nextThree.addEventListener('click', function(){
@@ -88,11 +77,7 @@ document.getElementById('letter-note-six').innerHTML ="C";
 
 lastLyric.style.display= 'none';
 
-
 });
-
-
-
 
 // This is the event handler property and function for the startOver button
 startOver.onclick = function() {
